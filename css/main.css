@@ -1,3 +1,29 @@
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translate(-10rem);
+  }
+  80% {
+    transform: translate(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0rem);
+  }
+}
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    transform: translate(10rem);
+  }
+  80% {
+    transform: translate(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0rem);
+  }
+}
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -9,11 +35,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #777;
-  font-size: 1.6rem;
-  letter-spacing: 0.2rem;
+  padding: 5rem;
   background-color: #fff;
 }
 
@@ -21,27 +43,12 @@ body {
   background-color: #f7f7f7;
 }
 
-.header {
-  position: relative;
-  height: 95vh;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/header-background.jpg") center/cover no-repeat;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
-}
-.header__logo {
-  position: absolute;
-  height: 7rem;
-  width: 5.6rem;
-  left: 5rem;
-  top: 5rem;
-}
-.header__box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #777;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
 }
 
 .title-first {
@@ -114,29 +121,25 @@ body {
   transition: all 1s;
 }
 
-@keyframes leftToRight {
-  0% {
-    opacity: 0;
-    transform: translate(-10rem);
-  }
-  80% {
-    transform: translate(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0rem);
-  }
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/header-background.jpg") center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
 }
-@keyframes RightToLeft {
-  0% {
-    opacity: 0;
-    transform: translate(10rem);
-  }
-  80% {
-    transform: translate(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0rem);
-  }
+.header__logo {
+  position: absolute;
+  height: 7rem;
+  width: 5.6rem;
+  left: 5rem;
+  top: 5rem;
+}
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
