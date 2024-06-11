@@ -2,7 +2,7 @@ body
     font-family: 'Roboto', sans-serif
     font-weight: 400
     color: $color-gray
-    font-size: 1.6rem
+    font-size: $font-size-paragraph
     letter-spacing: 0.2rem
     
 .title-first
@@ -35,7 +35,7 @@ body
 
 .title-secondary
     display: inline-block
-    font-size: 3.6rem
+    font-size: $font-size-paragrah-h2
     letter-spacing: 1rem
     text-transform: uppercase
     font-weight: 800
@@ -47,3 +47,15 @@ body
     &:hover
         transform: skewY(2deg) skewX(15deg) scale(1.1)
         text-shadow: $shadow-h2
+
+.title-third 
+    font-size: $font-size-paragrah-h3
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 700
+
+.paragraph
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem
+    line-height: 140%
+    font-weight: 400
