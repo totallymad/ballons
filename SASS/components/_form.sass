@@ -1,0 +1,48 @@
+.book
+    height: 50rem
+    background: linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 57%, rgba(186,133,84,0.8) 57%, rgba(161,79,3,0.8) 100%), url('../img/bg-from.jpg') center / cover no-repeat
+    box-shadow: $box-shadow
+    border-radius: .5rem
+    overflow: hidden
+
+.form
+    width: 60%
+    padding-top: 5rem
+    padding-left: 5rem
+    &__group
+        margin-bottom: 5rem
+        &:last-child
+            margin-bottom: 0
+
+    &__input
+        height: 5rem
+        font-size: $font-size-paragraph
+        letter-spacing: .2rem
+        font-weight: 400
+        color: $color-black
+        padding: 2 rem 0rem 2rem 2rem
+        background: $color-white
+        border: none
+        border-bottom: .2rem solid transprent 
+        border-radius: .5rem
+        width: 55%
+        &:focus
+            outline: none
+            border-bottom: .2rem solid #66D763
+            box-shadow: $box-shadow
+        &:focus:invalid
+            border-bottom: .2rem solid #D76363
+
+    &__label
+        font-size: $font-size-paragraph
+        letter-spacing: .2rem
+        font-weight: 400
+        display: block
+        margin-top: 1rem
+        margin-left: 1.5rem
+        transition: .7s all
+
+    &__input:placeholder-shown+&__label
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-3rem)
