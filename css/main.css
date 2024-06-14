@@ -41,6 +41,8 @@ body {
 
 .container {
   background-color: #f7f7f7;
+  position: relative;
+  z-index: 0;
 }
 
 body {
@@ -97,6 +99,9 @@ body {
 .title-secondary:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
   text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+.title-secondary_white {
+  color: #fff;
 }
 
 .title-third {
@@ -261,19 +266,162 @@ body {
   left: 0;
   width: 100%;
   backface-visibility: hidden;
-}
-.card-tour__side_front {
-  background: yellow;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  overflow: visible;
 }
 .card-tour__side_back {
   transform: rotateY(180deg);
-  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  background: linear-gradient(120deg, #BA8554, #a14f03);
 }
 .card-tour:hover .card-tour__side_front {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .card-tour:hover .card-tour__side_back {
   transform: rotateY(0deg);
+}
+.card-tour__img {
+  background-blend-mode: hard-light;
+  height: 21rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.card-tour__img_1 {
+  background: #BA8554 url("../img/card-1.jpg") center/cover no-repeat;
+}
+.card-tour__img_2 {
+  background: #BA8554 url("../img/card-2.jpg") center/cover no-repeat;
+}
+.card-tour__img_3 {
+  background: #BA8554 url("../img/card-3.jpg") center/cover no-repeat;
+}
+.card-tour__title {
+  font-size: 2.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  position: absolute;
+  top: 16rem;
+  right: 0;
+}
+.card-tour__span {
+  background: linear-gradient(90deg, #BA8554, #a14f03);
+  padding: 1rem 2rem 0.3rem 2rem;
+}
+.card-tour__span_2 {
+  position: absolute;
+  top: 3.4rem;
+  right: 0;
+}
+.card-tour__descr ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+}
+.card-tour__descr ul li {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  color: #777;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #777;
+  display: inline-block;
+}
+.card-tour__descr ul:last-child {
+  margin-bottom: 0;
+}
+.card-tour__backSide-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-tour__text {
+  margin-bottom: 8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+.card-tour__text_1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.card-tour__text_2 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.feedBack-card {
+  width: 85%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 6rem;
+  transform: skewX(330deg);
+}
+.feedBack-card > * {
+  transform: skewX(-330deg);
+}
+.feedBack-card__img {
+  width: 15rem;
+  height: 15rem;
+  background: green;
+  float: left;
+  border-radius: 100rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  margin-right: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+.feedBack-card__img img {
+  height: 100%;
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.feedBack-card__name {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.feedBack-card:hover .feedBack-card__name {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.feedBack-card:hover img {
+  transform: scale(1);
+  filter: blur(0.3rem) brightness(70%);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7));
+  z-index: -1;
 }
 
 .header {
@@ -351,6 +499,7 @@ body {
 
 .section-about {
   padding-top: 8rem;
+  margin-bottom: 15rem;
 }
 
 .section-adventure {
@@ -365,4 +514,10 @@ body {
 
 .section-tour {
   padding-top: 15rem;
+  margin-bottom: 8rem;
+}
+
+.section-feedBack {
+  padding: 8rem 0;
+  position: relative;
 }/*# sourceMappingURL=main.css.map */
