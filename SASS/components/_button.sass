@@ -1,6 +1,6 @@
 //Компонент кнопки
 .btn 
-    &:link, &:visited
+    &, &:link, &:visited
         @include style-link($color-gray)
         padding: 1.5rem 4rem
         background-color: $color-white
@@ -9,6 +9,7 @@
         transition: all .3s
         position: relative
         font-size: 2rem
+        border: none
     &:hover          
         transform: translateY(-3px)
         box-shadow: $box-shadow
@@ -17,7 +18,7 @@
             transform: scale(2)
     &:active
         transform: translateY(-2px)        
-        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.1))       
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.1))      
     &::after
         content: ""
         background-color: $color-white   
@@ -30,3 +31,11 @@
         left: 0
         z-index: -1
         transition: all 1s
+
+.btn_brown
+    &, &:link, &:visited
+        background: $color-brown-dark
+        color: $color-white
+    &:hover          
+    &::after
+        background: $color-brown-dark
